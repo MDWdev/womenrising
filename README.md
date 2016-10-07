@@ -52,6 +52,7 @@ than 3000 you just need to change the number to the correct one).
 
 In your config folder, create an 'application.yml' file.  Once you have done that go into
 the file and add:
+(note: the 'LINKEDIN_ID' and 'LINKEDIN_SECRET' are from the LinkedIn developer account you set up in the previous step)
 
 ```yaml
 LINKEDIN_ID: <<your Client ID here>>
@@ -66,7 +67,7 @@ internet (hence why we are having you create the linkedin dev account). The use
 of the gmail username and password is only for sending emails and will not be
 seen by anyone else.*
 
-This will give you access to Linkedin so that you will be able to sign-in.
+This will give you access to LinkedIn so that you will be able to sign-in.
 
 #### Development Environment
 
@@ -84,11 +85,13 @@ This will give you access to Linkedin so that you will be able to sign-in.
 3. Install `rvm`. See intructions on their website,
 [https://rvm.io/](https://rvm.io/).
 
-4. Use `rvm` to install the current ruby version.
+4. Use `rvm` to install the current (stable) ruby version.
+(You can check the latest version here: https://www.ruby-lang.org/en/downloads/)
 
   ```sh
-  rvm install ruby-2.3.0
+  rvm install ruby-2.3.1
   ```
+(replace the '2.3.1' with the latest stable version number)
 
 5. Install `bundler`.
 
@@ -146,17 +149,17 @@ pg_restore --verbose --clean --no-acl --no-owner -h localhost -d womenrising_dev
 
 ### Reporting Bugs
 
-Currently the how to report bugs is being worked on. If you have any issues
+Currently, the 'how to report bugs' is being worked on. If you have any issues,
 please send it to info@womenrising.co.
 
-Please make sure that you have your issues be as detailed as possible
+Please make sure that you have your issues and be as detailed (and specific) as possible
 (screenshots are always helpful!!).
 
 ### Sources
 
 The choice of the code of conduct was inspired by the awesome
 [Coraline Ada Ehmke](https://github.com/CoralineAda) from her talk at
-[Geekfest](https://vimeo.com/101449990). If you want to look more into this you
+[Geekfest](https://vimeo.com/101449990). If you want to look more into this, you
 can find more at [contributor-covenant](http://contributor-covenant.org/).
 
 
@@ -164,5 +167,5 @@ can find more at [contributor-covenant](http://contributor-covenant.org/).
 
 ```sh
 # open a heroku rails shell
-heorku run rake womenrising:peer_group_monthly_match c -a womenrising
+heroku run rake womenrising:peer_group_monthly_match c -a womenrising
 ```
